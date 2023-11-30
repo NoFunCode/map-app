@@ -30,7 +30,7 @@ export default async function Home() {
     <main className="flex flex-1 w-full p-4">
       <div className="w-1/3 flex justify-center">
         <Dialog>
-          <DialogTrigger>
+          <DialogTrigger asChild>
             <Button>Pick Month</Button>
           </DialogTrigger>
           <DialogContent>
