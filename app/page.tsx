@@ -7,11 +7,11 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import Leaflet from "@/components/leaflet";
 import Graph from "@/components/graph";
 import { parseCSV } from "@/utils/csv_import";
 import { inferGraphTypes } from "@/utils/csv_set_types";
 import { AirbnbData } from "@/types/data";
+import dynamic from "next/dynamic";
 
 type Props = {
   data: AirbnbData[]; // Using the AirbnbData type defined earlier
@@ -19,6 +19,10 @@ type Props = {
 };
 
 export default async function Home() {
+  const Leaflet = dynamic(() => import("@/components/leaflet"), {
+    ssr: false,
+  });
+
   const data: AirbnbData[] = inferGraphTypes(
     await parseCSV("data/airbnb_graph_data.csv")
   );
