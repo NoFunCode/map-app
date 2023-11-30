@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { FC } from "react";
 import { Bar } from "react-chartjs-2";
 import {
@@ -32,8 +32,18 @@ type AirbnbBarGraphProps = {
 };
 
 const monthNames = [
-  "January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
 ];
 
 const Graph: FC<AirbnbBarGraphProps> = ({ data, error }) => {
