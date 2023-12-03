@@ -43,7 +43,7 @@ export default async function Home() {
         </Dialog>
       </div>
       <div id="map" className="w-2/3 z-[1]">
-        <Leaflet center={[40.4041, -3.7601]} zoom={11} />
+        <Leaflet center={[40.4157, -3.7131]} zoom={12} />
       </div>
     </main>
   );

@@ -14,6 +14,7 @@ const Leaflet: React.FC<LeafletMapProps> = ({ center, zoom }) => {
   const showDistrictName = (feature: any, layer: L.Layer) => {
     if (feature.properties && feature.properties.name) {
       layer.bindPopup(feature.properties.name);
+      layer.bindTooltip(feature.properties.name, {permanent: true, direction: "center", className: "suburb-label"});
     }
   };
 
