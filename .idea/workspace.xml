@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="implemented pull down menu months" />
+    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="commit before merging">
+      <change afterPath="$PROJECT_DIR$/data/average_prices.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/declarations.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/leaflet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leaflet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,27 +42,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/charl/Documents/webanalytics/map-app/data",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Users\\charl\\Documents\\webanalytics\\map-app\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/charl/Documents/webanalytics/map-app/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\charl\\Documents\\webanalytics\\map-app\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\charl\Documents\webanalytics\map-app\data" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\charl\Documents\webanalytics\map-app\data" />
+      <recent name="C:\Users\charl\Documents\webanalytics\map-app\public" />
       <recent name="C:\Users\charl\Documents\webanalytics\map-app\components\ui" />
     </key>
   </component>
@@ -94,7 +105,8 @@
       <updated>1701889958666</updated>
       <workItem from="1701889960278" duration="8570000" />
       <workItem from="1701906093374" duration="4117000" />
-      <workItem from="1701952943040" duration="15000" />
+      <workItem from="1701952943040" duration="15689000" />
+      <workItem from="1701969061056" duration="321000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -103,7 +115,14 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1701909740451</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="commit before merging">
+      <option name="closed" value="true" />
+      <created>1701953130124</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1701953130124</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,6 +158,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="implemented pull down menu months" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented pull down menu months" />
+    <MESSAGE value="commit before merging" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit before merging" />
   </component>
 </project>
