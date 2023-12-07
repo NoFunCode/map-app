@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Graph from "@/components/graph";
@@ -14,7 +14,7 @@ import { AirbnbData } from "@/types/data";
 import dynamic from "next/dynamic";
 
 type Props = {
-  data: AirbnbData[]; // Using the AirbnbData type defined earlier
+  data: AirbnbData[];
   error?: string;
 };
 
@@ -26,20 +26,47 @@ export default async function Home() {
   const data: AirbnbData[] = inferGraphTypes(
     await parseCSV("data/airbnb_graph_data.csv")
   );
+
+  const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+  ];
+
   return (
     <main className="flex flex-1 w-full p-4">
-      <div className="w-1/3 flex justify-center">
+      <div className="w-1/3 flex justify-center" style={{display: 'block'}}>
+        <div style={{display: 'block', marginBottom: '400px'}}>
+          <Dialog>
+            <label htmlFor="months">Select a month:</label>
+            <select id="months" name="months">
+              {months.map((month, index) => (
+                  <option key={index} value={month}>
+                    {month}
+                  </option>
+              ))}
+            </select>
+          </Dialog>
+        </div>
         <Dialog>
-          <DialogTrigger asChild>
-            <Button>Pick Month</Button>
-          </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Graph with Month</DialogTitle>
-              <DialogDescription>Insert Graph Here</DialogDescription>
-              {data && <Graph data={data} />}
+              <DialogDescription>
+                <label htmlFor="months">Select a month:</label>
+                <select id="months" name="months">
+                {months.map((month, index) => (
+                    <option key={index} value={month}>
+                      {month}
+                    </option>
+                  ))}
+                </select>
+                {data && <Graph data={data} />}
+              </DialogDescription>
             </DialogHeader>
           </DialogContent>
+          <DialogTrigger asChild>
+            <Button>View average price per month based on zone</Button>
+          </DialogTrigger>
         </Dialog>
       </div>
       <div id="map" className="w-2/3 z-[1]">
