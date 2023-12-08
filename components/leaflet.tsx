@@ -5,6 +5,7 @@ import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import districts from "@/data/madrid-districts.json";
 import { GeoJsonObject } from "geojson";
+import stringSimilarity from 'string-similarity';
 import csvParser from "csv-parser";
 import entry from "next/dist/server/typescript/rules/entry";
 
@@ -77,25 +78,26 @@ const showDistrictName = (feature: any, layer: L.Layer) => {
     layer.bindTooltip(tooltipContent, { permanent: true, direction: "center", className: "zone-tooltip" });
 
     layer.on({
-  click: () => {
-    const month = 1; // Set to the desired month
-    const clickedDistrict = nameFromMap;
+      click: () => {
+        const month = 1; // Set to the desired month
+        const clickedDistrict = nameFromMap;
 
-    // Find the entry for the clicked district and specified month
-    const clickedEntry = jsonData.find((entry) => entry.region === clickedDistrict && entry.month === month);
+        // Find the entry for the clicked district and specified month with string similarity
+        const bestMatch = stringSimilarity.findBestMatch(clickedDistrict, jsonData.map(entry => entry.region));
+        const matchedEntry = jsonData[bestMatch.bestMatchIndex];
 
-    if (clickedEntry) {
-      // Display the price information in a popup
-      const popupContent = `Region: ${clickedDistrict}<br/>Month: ${month}<br/>Price: ${clickedEntry.price}`;
-      layer.bindPopup(popupContent);
-      layer.openPopup();
-    } else {
-      // No data for the specified month and region
-      layer.bindPopup(`Region: ${clickedDistrict}<br/>No data for Month ${month}`);
-      layer.openPopup();
-    }
-  },
-});
+        if (bestMatch.bestMatch.rating > 0.5) {
+          // Display the price information in a popup
+          const popupContent = `Region: ${clickedDistrict}<br/>Month: ${month}<br/>Price: ${matchedEntry.price}`;
+          layer.bindPopup(popupContent);
+          layer.openPopup();
+        } else {
+          // No close match found
+          layer.bindPopup(`Region: ${clickedDistrict}<br/>No data for Month ${month}`);
+          layer.openPopup();
+        }
+      },
+    });
   }
 };
 
