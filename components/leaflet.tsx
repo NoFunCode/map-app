@@ -37,14 +37,14 @@ const Leaflet: React.FC<LeafletMapProps> = ({ center, zoom }) => {
         jsonData = JSON.parse(jsonString); // Update the global jsonData variable
 
         // Log the JSON data to verify it
-        console.log(jsonData);
+       // console.log(jsonData);
 
         // Set the parsed JSON data to the state
         setCsvData(jsonData);
 
         jsonData.forEach((entry: CsvEntry) => {
           if (entry.month === 1) {
-            console.log(`Region: ${entry.region}, Month: ${entry.month} Price: ${entry.price}`);
+            //console.log(`Region: ${entry.region}, Month: ${entry.month} Price: ${entry.price}`);
             setEntries(prevEntries => [...prevEntries, entry]);
           }
         });
@@ -64,9 +64,9 @@ useEffect(() => {
 
 const showDistrictName = (feature: any, layer: L.Layer) => {
   //this is before -- it needs to be after its populated
-   console.log("jsonData globally accessible: ", jsonData);
+   //console.log("jsonData globally accessible: ", jsonData);
   const nameFromMap = feature.properties.name;
-  console.log("name from map " + nameFromMap);
+  //console.log("name from map " + nameFromMap);
   //console.log("region " + region + " month " + month + " price " + price);
 
   // Create a tooltip with the region name
@@ -77,26 +77,25 @@ const showDistrictName = (feature: any, layer: L.Layer) => {
     layer.bindTooltip(tooltipContent, { permanent: true, direction: "center", className: "zone-tooltip" });
 
     layer.on({
-      click: () => {
-        const month = 1; // Set to the desired month
+  click: () => {
+    const month = 1; // Set to the desired month
+    const clickedDistrict = nameFromMap;
 
-        // Filter data for the specified month and region
-        const filteredData = csvData.filter((entry) => entry.month === month && entry.region === nameFromMap);
-        console.log(filteredData.length);
-        console.log("csv data: " + csvData);
+    // Find the entry for the clicked district and specified month
+    const clickedEntry = jsonData.find((entry) => entry.region === clickedDistrict && entry.month === month);
 
-        if (filteredData.length > 0) {
-          // Display the price for the specified month
-          const monthPrice = filteredData[0].price;
-          layer.bindPopup(`Region: ${nameFromMap}<br/>Price (Month ${month}): $${monthPrice}`);
-          layer.openPopup();
-        } else {
-          // No data for the specified month and region
-          layer.bindPopup(`Region: ${nameFromMap}<br/>No data for Month ${month}`);
-          layer.openPopup();
-        }
-      },
-    });
+    if (clickedEntry) {
+      // Display the price information in a popup
+      const popupContent = `Region: ${clickedDistrict}<br/>Month: ${month}<br/>Price: ${clickedEntry.price}`;
+      layer.bindPopup(popupContent);
+      layer.openPopup();
+    } else {
+      // No data for the specified month and region
+      layer.bindPopup(`Region: ${clickedDistrict}<br/>No data for Month ${month}`);
+      layer.openPopup();
+    }
+  },
+});
   }
 };
 
