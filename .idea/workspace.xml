@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="abel to display average price per zone for most of the zones">
+    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="abel to display average price per zone for all zones">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/leaflet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leaflet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
       <workItem from="1701969061056" duration="2361000" />
       <workItem from="1701971666859" duration="264000" />
       <workItem from="1702032357064" duration="6099000" />
-      <workItem from="1702064231829" duration="1813000" />
+      <workItem from="1702064231829" duration="5583000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -149,7 +147,14 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1702066209602</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="abel to display average price per zone for all zones">
+      <option name="closed" value="true" />
+      <created>1702066518131</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1702066518131</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +194,7 @@
     <MESSAGE value="processing data to display average price on map" />
     <MESSAGE value="abel to print out the zone and average price" />
     <MESSAGE value="abel to display average price per zone for most of the zones" />
-    <option name="LAST_COMMIT_MESSAGE" value="abel to display average price per zone for most of the zones" />
+    <MESSAGE value="abel to display average price per zone for all zones" />
+    <option name="LAST_COMMIT_MESSAGE" value="abel to display average price per zone for all zones" />
   </component>
 </project>
