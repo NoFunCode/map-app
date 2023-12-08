@@ -1,10 +1,9 @@
- "use client";
-import React, {useEffect, useState} from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 import Papa from 'papaparse';
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import districts from "@/data/madrid-districts.json";
-import dataMap from "@/data/average_prices.csv"; // Import CSV file
 import { GeoJsonObject } from "geojson";
 
 interface CsvEntry {
@@ -12,6 +11,7 @@ interface CsvEntry {
   price: number;
   region: string;
 }
+
 interface LeafletMapProps {
   center: L.LatLngExpression;
   zoom: number;
@@ -22,26 +22,31 @@ const Leaflet: React.FC<LeafletMapProps> = ({ center, zoom }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        // Use the imported CSV data
-        const csvString = dataMap; // Assuming dataMap is a string
-        console.log("CSV string:", dataMap);
+       try {
+    // Import CSV data directly
+         // eslint-disable-next-line @next/next/no-assign-module-variable
+    const module = await import('@/data/average_prices.csv');
+    // Convert CSV data to Blob
+    const jsonString = JSON.stringify(module.default);
+    const jsonData = JSON.parse(jsonString);
 
-        // Create a Blob from the CSV string
-        const csvBlob = new Blob([csvString], { type: 'text/csv' });
+    // Log the JSON data to verify it
+    console.log(jsonData);
 
-        for (let i = 0; i < csvString.length; i++) {
-          console.log(csvString.at(i));
-        }
+    // Set the parsed JSON data to the state
+    setCsvData(jsonData);
 
-      } catch (error) {
-        console.error("Error fetching or parsing CSV data:", error);
-      }
+     jsonData.forEach((entry: CsvEntry) => {
+       if (entry.month === 1) {
+         console.log(`Region: ${entry.region}, Price: ${entry.price}`);
+       }})
+  } catch (e) {
+    console.log("error", e);
+  }
     };
-
-  // Call the fetchData function
-  fetchData();
-}, []); // Run the effect only once on mount
+    // Call the fetchData function
+    fetchData();
+  }, []); // Run the effect only once on mount
 
   const calculateAveragePrice = (month: number, region: string) => {
     console.log("moth: " + month + "region " + region);

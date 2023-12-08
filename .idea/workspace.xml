@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="processing data to display average price on map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/leaflet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leaflet.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +100,9 @@
       <workItem from="1701889960278" duration="8570000" />
       <workItem from="1701906093374" duration="4117000" />
       <workItem from="1701952943040" duration="15689000" />
-      <workItem from="1701969061056" duration="1655000" />
+      <workItem from="1701969061056" duration="2361000" />
+      <workItem from="1701971666859" duration="264000" />
+      <workItem from="1702032357064" duration="2853000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -122,7 +125,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1701969422822</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="processing data to display average price on map">
+      <option name="closed" value="true" />
+      <created>1701970764178</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1701970764178</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
