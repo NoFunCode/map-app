@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="processing data to display average price on map">
+    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="abel to print out the zone and average price">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/leaflet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leaflet.tsx" afterDir="false" />
     </list>
@@ -102,7 +102,7 @@
       <workItem from="1701952943040" duration="15689000" />
       <workItem from="1701969061056" duration="2361000" />
       <workItem from="1701971666859" duration="264000" />
-      <workItem from="1702032357064" duration="2853000" />
+      <workItem from="1702032357064" duration="6099000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -132,7 +132,14 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1701970764178</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="abel to print out the zone and average price">
+      <option name="closed" value="true" />
+      <created>1702035409691</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1702035409691</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,6 +177,7 @@
     <MESSAGE value="implemented pull down menu months" />
     <MESSAGE value="commit before merging" />
     <MESSAGE value="processing data to display average price on map" />
-    <option name="LAST_COMMIT_MESSAGE" value="processing data to display average price on map" />
+    <MESSAGE value="abel to print out the zone and average price" />
+    <option name="LAST_COMMIT_MESSAGE" value="abel to print out the zone and average price" />
   </component>
 </project>
