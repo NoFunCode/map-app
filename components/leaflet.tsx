@@ -87,7 +87,7 @@ const handleDistrictClick = (clickedDistrict: string, layer: L.Layer) => {
 
     for (const entry of prevEntries) {
       if (entry.region == clickedDistrict) {
-        const popupContent = `Region: ${clickedDistrict}<br/>Month: ${month}<br/>Price: ${entry.price}`;
+        const popupContent = `Region: ${clickedDistrict}<br/>Month: ${entry.month}<br/>Price: ${entry.price} €`;
         layer.bindPopup(popupContent);
         layer.openPopup();
       }

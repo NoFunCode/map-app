@@ -15,13 +15,15 @@ import { parseCSV } from "@/utils/csv_import";
 import { AirbnbData } from "@/types/data";
 import Graph from "@/components/graph";
 import PullDownMenu from "@/components/ui/pullDownMenu";
-import Leaflet from "@/components/leaflet"; // Import Leaflet directly
+import Leaflet from "@/components/leaflet";
+import Papa from "papaparse"; // Import Leaflet directly
 
 type Props = {
   data: AirbnbData[];
   error?: string;
 };
 
+let jsonData: AirbnbData[] = [];
 export default function Home() {
   const [data, setData] = useState<AirbnbData[]>([]);
   const [selectedMonth, setSelectedMonth] = useState<number>(1); // Default to January
@@ -32,15 +34,19 @@ export default function Home() {
   ];
 
   const fetchData = async () => {
-    try {
-      const response = await fetch("/data/airbnb_graph_data.csv");
-      const fileContent = await response.text();
-      const parsedData: Papa.ParseResult<any> = await parseCSV(fileContent);
-      setData(parsedData.data as AirbnbData[]);
-    } catch (error) {
-      console.error('Error fetching or parsing CSV:', error);
-    }
-  };
+  try {
+
+    // eslint-disable-next-line @next/next/no-assign-module-variable
+     const module = await import('@/data/airbnb_graph_data.csv');
+      const jsonString = JSON.stringify(module.default);
+      jsonData = JSON.parse(jsonString);
+
+      setData(jsonData);
+
+  } catch (error) {
+    console.error('Error fetching or parsing CSV:', error);
+  }
+};
 
   const handleMonthChange = (selectedMonth: string) => {
     const monthNumber = months.indexOf(selectedMonth) + 1; // Get the index and add 1 to get the month number
@@ -55,7 +61,9 @@ export default function Home() {
   return (
     <main className="flex flex-1 w-full p-4">
       <div className="w-1/3 flex justify-center" style={{ display: 'block' }}>
-        <div style={{ display: 'block', marginBottom: '400px' }}>
+        <div style={{ display: 'block', marginBottom: '250px' }}>
+          <h2>This is an app that lets you se the average prices of all accommodations of each zone in madrid</h2>
+          <br/>
           <Dialog>
             <PullDownMenu
               months={months}
@@ -68,16 +76,12 @@ export default function Home() {
             <DialogHeader>
               <DialogTitle>Graph with Month</DialogTitle>
               <DialogDescription>
-                <PullDownMenu
-                  months={months}
-                  onMonthChange={handleMonthChange}
-                />
                 {data && <Graph data={data} />}
               </DialogDescription>
             </DialogHeader>
           </DialogContent>
           <DialogTrigger asChild>
-            <Button>View average price per month based on zone</Button>
+            <Button>View average price per month</Button>
           </DialogTrigger>
         </Dialog>
       </div>
