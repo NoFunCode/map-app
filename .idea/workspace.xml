@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="can display all prices map and display color depending on price">
-      <change afterPath="$PROJECT_DIR$/components/ui/pullDownMenu.tsx" afterDir="false" />
+    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="pulldown menu connected to map">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/leaflet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leaflet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/csv_import.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/csv_import.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +104,7 @@
       <workItem from="1701971666859" duration="264000" />
       <workItem from="1702032357064" duration="6099000" />
       <workItem from="1702064231829" duration="5779000" />
-      <workItem from="1702073022207" duration="11203000" />
+      <workItem from="1702073022207" duration="14282000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -167,7 +162,14 @@
       <option name="presentableId" value="LOCAL−00008" />
       <updated>1702070343424</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL−00009" summary="pulldown menu connected to map">
+      <option name="closed" value="true" />
+      <created>1702085450678</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1702085450678</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +211,7 @@
     <MESSAGE value="abel to display average price per zone for most of the zones" />
     <MESSAGE value="abel to display average price per zone for all zones" />
     <MESSAGE value="can display all prices map and display color depending on price" />
-    <option name="LAST_COMMIT_MESSAGE" value="can display all prices map and display color depending on price" />
+    <MESSAGE value="pulldown menu connected to map" />
+    <option name="LAST_COMMIT_MESSAGE" value="pulldown menu connected to map" />
   </component>
 </project>

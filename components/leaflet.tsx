@@ -42,7 +42,6 @@ const Leaflet: React.FC<LeafletMapProps> = ({ center, zoom, selectedMonth }) => 
         entry.region = districts.features[bestMatch.bestMatchIndex].properties.name.trim();
       });
 
-      console.log(jsonData);
       // Fetch data based on the selected month
       setEntries([]);
       jsonData.forEach((entry: CsvEntry) => {
@@ -60,7 +59,6 @@ const Leaflet: React.FC<LeafletMapProps> = ({ center, zoom, selectedMonth }) => 
 
 // Log 'entries' state after it has been updated
 useEffect(() => {
-  console.log("Entries after setting state:", entries);
 }, [entries]);
 
   useEffect(() => {
@@ -82,28 +80,22 @@ useEffect(() => {
       });
     }
   };
+const handleDistrictClick = (clickedDistrict: string, layer: L.Layer) => {
+  const month = selectedMonth;
 
-  const handleDistrictClick = (clickedDistrict: string, layer: L.Layer) => {
-    const month = monthPullDownRef.current;
+  setEntries((prevEntries) => {
 
-    const bestMatch = stringSimilarity.findBestMatch(clickedDistrict, jsonData.map(entry => entry.region.trim()));
-    const matchedEntry = jsonData[bestMatch.bestMatchIndex];
-
-    if (bestMatch.bestMatch.rating > 0.5) {
-      jsonData.forEach((entry, index) => {
-        if (index === bestMatch.bestMatchIndex) {
-          entry.region = clickedDistrict;
-        }
-      });
-
-      const popupContent = `Region: ${clickedDistrict}<br/>Month: ${month}<br/>Price: ${matchedEntry.price}`;
-      layer.bindPopup(popupContent);
-      layer.openPopup();
-    } else {
-      layer.bindPopup(`Region: ${clickedDistrict}<br/>No data for Month ${month}`);
-      layer.openPopup();
+    for (const entry of prevEntries) {
+      if (entry.region == clickedDistrict) {
+        const popupContent = `Region: ${clickedDistrict}<br/>Month: ${month}<br/>Price: ${entry.price}`;
+        layer.bindPopup(popupContent);
+        layer.openPopup();
+      }
     }
-  };
+
+    return prevEntries; // Return the updated entries
+  });
+};
 
  const style = (feature: any) => {
   const districtName = feature.properties.name.trim();
