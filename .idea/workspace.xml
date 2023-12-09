@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="abel to display average price per zone for all zones">
+    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="can display all prices map and display color depending on price">
+      <change afterPath="$PROJECT_DIR$/components/ui/pullDownMenu.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/leaflet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leaflet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/csv_import.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/utils/csv_import.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,22 +41,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/charl/Documents/webanalytics/map-app/data&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\charl\\Documents\\webanalytics\\map-app\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/charl/Documents/webanalytics/frontend/map-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "C:\\Users\\charl\\Documents\\webanalytics\\frontend\\map-app\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\charl\Documents\webanalytics\map-app\data" />
@@ -103,7 +108,8 @@
       <workItem from="1701969061056" duration="2361000" />
       <workItem from="1701971666859" duration="264000" />
       <workItem from="1702032357064" duration="6099000" />
-      <workItem from="1702064231829" duration="5583000" />
+      <workItem from="1702064231829" duration="5779000" />
+      <workItem from="1702073022207" duration="11203000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -154,7 +160,14 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1702066518131</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="can display all prices map and display color depending on price">
+      <option name="closed" value="true" />
+      <created>1702070343424</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1702070343424</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,7 +189,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="map_4" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
@@ -195,6 +208,7 @@
     <MESSAGE value="abel to print out the zone and average price" />
     <MESSAGE value="abel to display average price per zone for most of the zones" />
     <MESSAGE value="abel to display average price per zone for all zones" />
-    <option name="LAST_COMMIT_MESSAGE" value="abel to display average price per zone for all zones" />
+    <MESSAGE value="can display all prices map and display color depending on price" />
+    <option name="LAST_COMMIT_MESSAGE" value="can display all prices map and display color depending on price" />
   </component>
 </project>

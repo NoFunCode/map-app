@@ -1,16 +1,17 @@
-import fs from 'fs';
-import path from 'path';
 import Papa from 'papaparse';
 
-export const parseCSV = (filePath: string): Promise<Papa.ParseResult<any>> => {
+export const parseCSV = async (fileContent: string): Promise<Papa.ParseResult<any>> => {
   return new Promise((resolve, reject) => {
-    const fullPath = path.join(process.cwd(), filePath);
-    const fileContent = fs.readFileSync(fullPath, 'utf8');
-
     Papa.parse(fileContent, {
       header: true,
       skipEmptyLines: true,
-      complete: resolve,
+      complete: (result) => {
+        resolve({
+          data: result.data,
+          errors: result.errors,
+          meta: result.meta,
+        });
+      },
       error: reject,
     });
   });
