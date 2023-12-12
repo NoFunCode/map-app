@@ -2,27 +2,17 @@
 "use client";
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { Button } from "@/components/ui/button";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { parseCSV } from "@/utils/csv_import";
 import { GraphData } from "@/types/data";
 import Graph from "@/components/graph";
-import PullDownMenu from "@/components/ui/pullDownMenu";
-import Leaflet from "@/components/leaflet";
-import Papa from "papaparse"; // Import Leaflet directly
 import MonthPicker from "@/components/monthPicker";
 
 export default function Home() {
   const [data, setData] = useState<GraphData[]>([]);
   const [selectedMonth, setSelectedMonth] = useState<number>(1); // Default to January
   let jsonData: GraphData[] = [];
+  const Leaflet = dynamic(() => import("@/components/leaflet"), {
+    ssr: false,
+  });
 
   const months = [
     "January",
