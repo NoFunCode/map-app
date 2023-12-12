@@ -1,4 +1,4 @@
-export type AirbnbData = {
+export type GraphData = {
     month: number;
     price: number;
   };

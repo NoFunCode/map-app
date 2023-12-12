@@ -55,7 +55,7 @@ const Graph: FC<AirbnbBarGraphProps> = ({ data, error }) => {
       },
       title: {
         display: true,
-        text: "Average Airbnb Prices by Month",
+        text: "Average Housing Prices by Month",
       },
     },
     scales: {
