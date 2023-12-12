@@ -11,6 +11,7 @@ import {
   Legend,
   ChartOptions,
 } from "chart.js";
+import { GraphData } from "@/types/data";
 
 ChartJS.register(
   CategoryScale,
@@ -21,13 +22,8 @@ ChartJS.register(
   Legend
 );
 
-type AirbnbData = {
-  month: number;
-  price: number;
-};
-
-type AirbnbBarGraphProps = {
-  data: AirbnbData[];
+type BarGraphProps = {
+  data: GraphData[];
   error?: string;
 };
 
@@ -46,7 +42,7 @@ const monthNames = [
   "December",
 ];
 
-const Graph: FC<AirbnbBarGraphProps> = ({ data, error }) => {
+const Graph: FC<BarGraphProps> = ({ data, error }) => {
   const options: ChartOptions<"bar"> = {
     responsive: true,
     plugins: {

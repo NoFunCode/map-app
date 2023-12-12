@@ -1,4 +1,4 @@
 export type GraphData = {
-    month: number;
-    price: number;
-  };
+  month: number;
+  price: number;
+};
