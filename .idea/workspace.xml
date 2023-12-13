@@ -110,7 +110,8 @@
       <workItem from="1702305718297" duration="111000" />
       <workItem from="1702308358677" duration="599000" />
       <workItem from="1702311744476" duration="767000" />
-      <workItem from="1702466473679" duration="2923000" />
+      <workItem from="1702466473679" duration="2954000" />
+      <workItem from="1702505337323" duration="87000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -182,7 +183,14 @@
       <option name="presentableId" value="LOCAL−00010" />
       <updated>1702165179372</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL−00011" summary="fixed reading from airbnb prices file">
+      <option name="closed" value="true" />
+      <created>1702474762126</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1702474762126</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
