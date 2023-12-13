@@ -51,7 +51,7 @@ const Graph: FC<BarGraphProps> = ({ data, error }) => {
       },
       title: {
         display: true,
-        text: "Average Housing Prices by Month",
+        text: "Average Housing Prices in 2024 by Month",
       },
     },
     scales: {

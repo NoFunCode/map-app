@@ -65,11 +65,13 @@ export default function Home() {
           </h2>
           <br />
           {data && <Graph data={data} />}
-          <MonthPicker
-            months={months}
-            onMonthChange={handleMonthChange}
-            selectedMonth="January"
-          />
+          <div className="mt-4">
+            <MonthPicker
+              months={months}
+              onMonthChange={handleMonthChange}
+              selectedMonth="January"
+            />
+          </div>
         </div>
       </div>
       <div id="map" className="w-2/3 z-[1] ps-2">

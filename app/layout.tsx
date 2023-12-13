@@ -3,6 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,37 +32,46 @@ export default function RootLayout({
               <code className="font-mono font-bold">incomplete data</code>
             </p>
             <nav className="mb-32 flex justify-center lg:mb-0">
-              <Link
-                href="/"
-                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-              >
-                <h1 className={`mb-3 text-2xl font-semibold`}>
-                  Map App{" "}
-                  <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                    -&gt;
-                  </span>
-                </h1>
-                <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-                  Web Analytics University Project.
-                </p>
-              </Link>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Link
+                      href="/"
+                      className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                    >
+                      <h1 className={`mb-3 text-2xl font-semibold`}>
+                        Map App{" "}
+                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                          -&gt;
+                        </span>
+                      </h1>
+                      <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+                        Web Analytics University Project.
+                      </p>
+                    </Link>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Center Map</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
             </nav>
-            <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
+            <div className="bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
               <a
-                className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-                href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+                className="me-2 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                By{" "}
-                <Image
-                  src="/vercel.svg"
-                  alt="Vercel Logo"
-                  className="dark:invert"
-                  width={100}
-                  height={24}
-                  priority
-                />
+                Code for MapApp
+              </a>
+              <a
+                className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                href=""
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Code for Data
               </a>
             </div>
           </div>
