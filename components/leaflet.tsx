@@ -93,21 +93,59 @@ const Leaflet: React.FC<LeafletMapProps> = ({
       });
     }
   };
-  const handleDistrictClick = (clickedDistrict: string, layer: L.Layer) => {
-    const month = selectedMonth;
+  const getProsAndCons = (region: string): { pros: string; cons: string } => {
+  let pros = "";
+  let cons = "";
 
-    setEntries((prevEntries) => {
-      for (const entry of prevEntries) {
-        if (entry.region == clickedDistrict) {
-          const popupContent = `Region: ${clickedDistrict}<br/>Month: ${entry.month}<br/>Average Price per Night: ${entry.price} €`;
-          layer.bindPopup(popupContent);
-          layer.openPopup();
-        }
+  switch (region) {
+    case "Arganzuela":
+      pros = "Green spaces, cultural attractions";
+      cons = "Traffic congestion";
+      break;
+
+    case "Barajas":
+      pros = "Close to the airport";
+      cons = "Limited nightlife";
+      break;
+
+    // Repeat the above pattern for each region...
+
+    default:
+      pros = "Pros not defined";
+      cons = "Cons not defined";
+      break;
+  }
+
+  return { pros, cons };
+};
+
+ const handleDistrictClick = (clickedDistrict: string, layer: L.Layer) => {
+  const month = selectedMonth;
+
+  setEntries((prevEntries) => {
+    for (const entry of prevEntries) {
+      if (entry.region === clickedDistrict) {
+        // Get pros and cons for the region
+        const { pros, cons } = getProsAndCons(clickedDistrict);
+
+        // Display popup with information, including pros and cons
+        const popupContent = `
+          Region: ${clickedDistrict}<br/>
+          Month: ${entry.month}<br/>
+          Average Price per Night: ${entry.price} €<br/>
+          <br/>
+          <strong>Pros:</strong> ${pros}<br/>
+          <strong>Cons:</strong> ${cons}
+        `;
+
+        layer.bindPopup(popupContent);
+        layer.openPopup();
       }
+    }
 
-      return prevEntries; // Return the updated entries
-    });
-  };
+    return prevEntries; // Return the updated entries
+  });
+};
 
   const style = (feature: any) => {
     const districtName = feature.properties.name.trim();
