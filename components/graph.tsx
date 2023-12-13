@@ -51,7 +51,7 @@ const Graph: FC<BarGraphProps> = ({ data, error }) => {
       },
       title: {
         display: true,
-        text: "Average Housing Prices in 2024 by Month",
+        text: "Average Price per Night in 2024 by Month",
       },
     },
     scales: {
@@ -65,7 +65,7 @@ const Graph: FC<BarGraphProps> = ({ data, error }) => {
     labels: data.map((d) => monthNames[d.month - 1]), // Convert month number to month name
     datasets: [
       {
-        label: "Average Price",
+        label: "Average Price per Night",
         data: data.map((d) => d.price),
         backgroundColor: "rgba(53, 162, 235, 0.5)",
       },

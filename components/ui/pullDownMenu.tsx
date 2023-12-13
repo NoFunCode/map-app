@@ -1,13 +1,16 @@
 // pullDownMenu.tsx
 "use client";
-import React from 'react';
+import React from "react";
 
 type PullDownMenuProps = {
   months: string[];
   onMonthChange: (selectedMonth: string) => void;
 };
 
-const PullDownMenu: React.FC<PullDownMenuProps> = ({ months, onMonthChange }) => {
+const PullDownMenu: React.FC<PullDownMenuProps> = ({
+  months,
+  onMonthChange,
+}) => {
   const handleMonthChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedMonth = event.target.value;
     onMonthChange(selectedMonth);

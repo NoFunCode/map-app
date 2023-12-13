@@ -99,7 +99,7 @@ const Leaflet: React.FC<LeafletMapProps> = ({
     setEntries((prevEntries) => {
       for (const entry of prevEntries) {
         if (entry.region == clickedDistrict) {
-          const popupContent = `Region: ${clickedDistrict}<br/>Month: ${entry.month}<br/>Price: ${entry.price} €`;
+          const popupContent = `Region: ${clickedDistrict}<br/>Month: ${entry.month}<br/>Average Price per Night: ${entry.price} €`;
           layer.bindPopup(popupContent);
           layer.openPopup();
         }
