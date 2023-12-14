@@ -59,7 +59,7 @@ export default function RootLayout({
             <div className="bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
               <a
                 className="me-2 group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                href=""
+                href="https://github.com/NoFunCode/map-app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -67,7 +67,7 @@ export default function RootLayout({
               </a>
               <a
                 className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-                href=""
+                href="https://github.com/NoFunCode/map-data"
                 target="_blank"
                 rel="noopener noreferrer"
               >
