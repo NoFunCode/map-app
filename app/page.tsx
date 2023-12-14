@@ -53,12 +53,12 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-1 w-full p-4">
+    <main className="lg:flex lg:flex-1 w-full p-4">
       <div
-        className="w-1/3 flex justify-center pe-2"
+        className="lg:w-1/3 flex justify-center lg:pe-2"
         style={{ display: "block" }}
       >
-        <div style={{ display: "block", marginBottom: "250px" }}>
+        <div className="mb-4">
           <h2>
             This is an app that lets you se the average prices of all
             accommodations of each zone in madrid
@@ -74,7 +74,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div id="map" className="w-2/3 z-[1] ps-2">
+      <div id="map" className="lg:w-2/3 z-[1] lg:ps-2 lg:h-auto h-96">
         <Leaflet
           center={[40.4157, -3.7131]}
           zoom={12}
