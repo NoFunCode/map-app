@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="pulldown menu connected to map">
+    <list default="true" id="4737deb4-ace5-4b58-a856-f8345189830d" name="Changes" comment="fixed reading from airbnb prices file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/leaflet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/leaflet.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +105,13 @@
       <workItem from="1702032357064" duration="6099000" />
       <workItem from="1702064231829" duration="5779000" />
       <workItem from="1702073022207" duration="14282000" />
-      <workItem from="1702162824628" duration="1975000" />
+      <workItem from="1702162824628" duration="4804000" />
+      <workItem from="1702301723583" duration="264000" />
+      <workItem from="1702305718297" duration="111000" />
+      <workItem from="1702308358677" duration="599000" />
+      <workItem from="1702311744476" duration="767000" />
+      <workItem from="1702466473679" duration="2954000" />
+      <workItem from="1702505337323" duration="87000" />
     </task>
     <task id="LOCAL−00001" summary="implemented pull down menu months">
       <option name="closed" value="true" />
@@ -171,7 +176,21 @@
       <option name="presentableId" value="LOCAL−00009" />
       <updated>1702085450678</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL−00010" summary="fixed reading from airbnb prices file">
+      <option name="closed" value="true" />
+      <created>1702165179372</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1702165179372</updated>
+    </task>
+    <task id="LOCAL−00011" summary="fixed reading from airbnb prices file">
+      <option name="closed" value="true" />
+      <created>1702474762126</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1702474762126</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +233,7 @@
     <MESSAGE value="abel to display average price per zone for all zones" />
     <MESSAGE value="can display all prices map and display color depending on price" />
     <MESSAGE value="pulldown menu connected to map" />
-    <option name="LAST_COMMIT_MESSAGE" value="pulldown menu connected to map" />
+    <MESSAGE value="fixed reading from airbnb prices file" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed reading from airbnb prices file" />
   </component>
 </project>
