@@ -1,4 +1,3 @@
-// leaflet.tsx
 import React, { useEffect, useState, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -6,6 +5,7 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import districts from "@/data/madrid-districts.json";
 import { GeoJsonObject } from "geojson";
 import { diceCoefficient } from "dice-coefficient";
+import PriceLegend from "./price-legend";
 
 interface CsvEntry {
   month: number;
@@ -47,7 +47,6 @@ const Leaflet: React.FC<LeafletMapProps> = ({
             ...entry,
             region: removeAccents(entry.region.trim().normalize()),
           }));
-        console.log(dataForSelectedMonth);
 
         setEntries(dataForSelectedMonth);
       } catch (e) {
@@ -285,6 +284,7 @@ const Leaflet: React.FC<LeafletMapProps> = ({
         style={style}
         onEachFeature={showDistrictName}
       />
+      <PriceLegend getColor={getColor} />
     </MapContainer>
   );
 };
